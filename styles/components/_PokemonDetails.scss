@@ -1,0 +1,32 @@
+@use '../utils/variables' as variables;
+@use '../utils/mixins' as mixins;
+
+.pokemonDetail{
+ 
+  @include mixins.pokemon-card-style;
+   &> button{
+    margin-bottom: 15px;
+  }
+}
+.type {
+  margin: 0 auto;
+  background-color :#eecf6a;
+  padding: 8px;
+  border-radius: 10px;
+  width: 40%;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+button{
+  background-color: #eecf6a;
+  color: white;
+  border-radius: 20px;
+  padding: 10px;
+  border: solid 1px #eecf6a;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  }
+}

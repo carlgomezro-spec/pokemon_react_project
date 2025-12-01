@@ -1,0 +1,66 @@
+@use '../utils/variables' as variables;
+@use '../utils/mixins' as mixins;
+
+
+/* _form.scss o styles.scss */
+
+h1 {
+  margin-bottom: 20px;
+  color: variables.$azul;
+}
+.addPokemon {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 25px;
+  background-color:  variables.$amarillo-form;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  
+  label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: variables.$azul;
+  }
+  input,
+  select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+
+  button {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: variables.$azul;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background-color: rgb(72, 122, 151);
+      transform: translateY(-2px);
+    }
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .addPokemon {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  input,
+  select,
+  button {
+    font-size: 14px;
+  }
+}

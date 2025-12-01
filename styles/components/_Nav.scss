@@ -1,0 +1,34 @@
+@use '../utils/variables' as variables;
+@use '../utils/mixins' as mixins;
+
+nav {
+  width: 100%;
+    & > ul{
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    & > li{
+    background-color: variables.$botones;
+    padding: 8px 20px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: right;
+    
+    }
+    }
+}
+a{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  
+}
+nav li:hover{
+    transform:  scale(1.10);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}

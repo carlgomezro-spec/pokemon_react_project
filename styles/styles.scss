@@ -1,0 +1,12 @@
+//FICHERO DE ESTILOS PRINCIPAL
+//Aqui se ponen todas las hojas de estilos que usa tu web (no hay que poner_)
+@use "./views/index";
+@use "./views/App";
+
+//CADA COMPONENTE con estilos propios añadirlos aqui
+@use "./components/Nav";
+@use "./components/Main";
+@use "./components/PokemonCard";
+@use "./components/PokemonDetails";
+@use "./components/PokemonForm";
+@use "./components/Search";

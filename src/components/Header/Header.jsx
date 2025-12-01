@@ -1,22 +1,17 @@
-import React, { useContext} from "react";
-import Nav from "./Nav";
+// import { useContext} from 'react'
+// import { useNavigate } from 'react-router-dom';
+import React from "react";
+import "./Header.css"
 
-import { UserContext } from '../../context/UserContext'
+// import { UserContext } from '../../context/UserContext'
+
+import Nav from "./Nav/Nav"
 
 const Header = () => {
-  //consumir el contexto
-  const { username, updateUsername} = useContext(UserContext);
-
   return <header>
-    <Nav/>
-    {username ? 
-        <>
-          <span>Hola, {username}</span>
-          <button onClick={() => updateUsername("")}>Logout</button>
-        </>
-       : <button>Login</button>
-      }
-    </header>; 
+    
+     <Nav/>
+  </header>;
 };
 
 export default Header;

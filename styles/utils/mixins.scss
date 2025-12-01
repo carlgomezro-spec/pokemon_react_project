@@ -1,0 +1,43 @@
+@use '../utils/variables' as variables;
+@mixin pokemon-card-style {
+  background-color: #f3f3f3;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 70%;
+  margin: 0 auto;
+  margin-top:50px;
+  border: 3px solid variables.$amarillo-intenso;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  }
+
+  img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 15px;
+  }
+
+  h2 {
+    padding: 10px;
+    background-color:variables.$amarillo-intenso ;
+    color: #fbf3f3;
+    font-size: 40px;
+   
+    margin:0;
+    border-radius: 8px 8px 0 0; // coincide con el contenedor
+   width: 100%;             // ocupa todo el ancho del contenedor
+   box-sizing: border-box;
+  }
+
+  p {
+    
+    font-size: 18px;
+    color: #766e6e;
+  }
+}
