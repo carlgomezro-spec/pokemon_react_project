@@ -5,8 +5,12 @@
 
 //CADA COMPONENTE con estilos propios añadirlos aqui
 @use "./components/Nav";
+@use "./components/Header";
 @use "./components/Main";
 @use "./components/PokemonCard";
 @use "./components/PokemonDetails";
 @use "./components/PokemonForm";
+@use "./components/PokemonList";
 @use "./components/Search";
+@use "./components/SearchContainer";
+@use "./components/Footer";
