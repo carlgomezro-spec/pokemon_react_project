@@ -1,5 +1,5 @@
 import React from "react";
-//Contenido de la card de pokemons
+
 const PokemonCard = ({pokemon}) => { //prop pokemon del contenedor Padre PokemonList
   const id = pokemon.id;
   const name = pokemon.name;

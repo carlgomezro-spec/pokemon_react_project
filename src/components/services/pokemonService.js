@@ -4,7 +4,7 @@ export const fetchPokemonById = async (id) => {
   try {
     const response = await fetch(`${BASE_API_URL}/pokemon/${id}`);
     if (!response.ok) {
-      throw new Error("Pokémon not found");
+      throw new Error("No se ha encontrado el Pokemon");
     }
     return await response.json();
   } catch (error) {

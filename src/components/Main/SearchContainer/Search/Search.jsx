@@ -1,11 +1,9 @@
 import React,{useState ,useEffect, useRef} from "react";
 
-//<Search />: recibe setValue como prop, para actualizar el estado value cuando el usuario escribe y envía.
-
 const Search = ({setValue}) => { //prop del Componente Padre (valor del input)
-  //ESTADO
+
   const [input, setInput] = useState("");//Estado del input (en principio está vacío)
-  //DEBOUNCE
+  //Debounce
   const debounceRef = useRef(null);
    useEffect(() => {
     // si el input está vacío → NO lanzamos nada
@@ -21,15 +19,7 @@ const Search = ({setValue}) => { //prop del Componente Padre (valor del input)
 
     return () => clearTimeout(debounceRef.current);
   }, [input, setValue]);
-  // const handleSubmit = (e) => {
-  //     e.preventDefault();
-  //     if (input.trim() !== "") {
-  //       setValue(input); // Actualizamos el estado en SearchContainer
-  //       setInput("");
-  //     }
-  //   };
 
-  //onSubmit={handleSubmit}
   return<section>
            <form >
               <input className="searchInput"
@@ -38,7 +28,6 @@ const Search = ({setValue}) => { //prop del Componente Padre (valor del input)
               onChange={(e) => setInput(e.target.value)}
               placeholder="Busca un Pokémon"
             />
-            {/* <button type="submit">Buscar</button> */}
           </form>
   
        </section>;
