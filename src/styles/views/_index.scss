@@ -19,7 +19,6 @@ header{
 
 body{
   background-color: variables.$yellow-fondo;
-  padding: 20px;
   display: flex;
 	justify-content: center;
 	flex-direction: column;
@@ -42,14 +41,13 @@ main{
 }
 footer{
 
-  color: rgb(29, 83, 114);
+  background-color: variables.$headerandfooter;
+  color: white;
   text-align: center;
   padding: 15px 20px;
-  margin-top: auto; /* empuja el footer al fondo */
-  font-size: 20px;
-  & > a {
-    color:rgb(29, 83, 114);
-  }
+  display: grid;
+
+ 
 }
 
 .pokemonName{
