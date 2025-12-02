@@ -8,12 +8,12 @@ import { fetchPokemonById } from "../../services/pokemonService";
 //https://pokeapi.co/api/v2/pokemon/3
 //https://pokeapi.co/api/v2/pokemon/5
 
-const PokemonDetail = () => {
+const PokemonDetails = () => {
   const { id } = useParams(); // params
   
 
   //ESTADOS
-  const [pokemonDetail, setPokemonDetail] = useState(null);
+  const [pokemonDetails, setPokemonDetails] = useState(null);
 
 
 
@@ -22,7 +22,7 @@ const PokemonDetail = () => {
    
       try {
         const data = await fetchPokemonById(id);
-        setPokemonDetail(data);
+        setPokemonDetails(data);
       
       } catch (error) {
        console.error("Error fetching product data:", error);
@@ -34,8 +34,8 @@ const PokemonDetail = () => {
 
   //Para poder escuchar sus sonidos
   const playCryLatest = () => {
-  if (pokemonDetail?.cries?.latest) {
-    const audio = new Audio(pokemonDetail.cries.latest);
+  if (pokemonDetails?.cries?.latest) {
+    const audio = new Audio(pokemonDetails.cries.latest);
     audio.play().catch(err => console.log("Audio no reproducido", err));
     }
   };
@@ -45,21 +45,21 @@ const PokemonDetail = () => {
 
   //FUNCIÓN DE RENDERIZADO
   const renderOnePokemon = () => {
-    if (!pokemonDetail) return "No se ha encontrado este pokemon";
+    if (!pokemonDetails) return "No se ha encontrado este pokemon";
     return (
       <div className="pokemonDetail">
         
         {/* <h1>POKEMON DETAIL</h1> */}
         
-        <h2 className="pokemonName"> {pokemonDetail.name}</h2>
-        <img src={pokemonDetail.sprites.front_default}></img>
-        <p><b>ID:</b> {pokemonDetail.id}</p>
-        <p><b>Abilities:</b> {pokemonDetail.abilities[0].ability.name} / {pokemonDetail.abilities[1].ability.name}</p>
-        <p><b>Base Experience:</b> {pokemonDetail.base_experience }</p>
-        <p className="type"><b>TypeOne: </b>{pokemonDetail.types[0].type.name}</p>
-        <p className="type"><b>TypeTwo: </b> {pokemonDetail.types[1]?.type.name}</p>
-        <p><b>Height:</b>{pokemonDetail.height}</p>
-        <p><b>Moves: </b>{pokemonDetail.moves[0]?.move.name}</p>
+        <h2 className="pokemonName"> {pokemonDetails.name}</h2>
+        <img src={pokemonDetails.sprites.front_default}></img>
+        <p><b>ID:</b> {pokemonDetails.id}</p>
+        <p><b>Abilities:</b> {pokemonDetails.abilities[0].ability.name} / {pokemonDetails.abilities[1].ability.name}</p>
+        <p><b>Base Experience:</b> {pokemonDetails.base_experience }</p>
+        <p className="type"><b>TypeOne: </b>{pokemonDetails.types[0].type.name}</p>
+        <p className="type"><b>TypeTwo: </b> {pokemonDetails.types[1]?.type.name}</p>
+        <p><b>Height:</b>{pokemonDetails.height}</p>
+        <p><b>Moves: </b>{pokemonDetails.moves[0]?.move.name}</p>
         <button onClick={playCryLatest}>Escuchar Cry</button>
         
        
@@ -71,4 +71,4 @@ const PokemonDetail = () => {
     </div>;
 };
 
-export default PokemonDetail;
+export default PokemonDetails;

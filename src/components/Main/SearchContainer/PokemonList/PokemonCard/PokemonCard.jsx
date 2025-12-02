@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 
 const PokemonCard = ({pokemon}) => { //prop pokemon del contenedor Padre PokemonList
   const id = pokemon.id;
@@ -13,6 +15,10 @@ const PokemonCard = ({pokemon}) => { //prop pokemon del contenedor Padre Pokemon
     <img src={image}></img>
     <p><b>Tipo Uno:</b>{typeOne}</p>
     <p><b>Tipo Dos:</b>{typeTwo}</p>
+      {/* Link al detalle extendido */}
+      <Link to={`/pokemon/${id}`} className="detalleBtn">
+        Ver Detalle
+      </Link>
   </article>;
 };
 

@@ -6,3 +6,12 @@
   @include mixins.pokemon-card-style;
  
 }
+.detalleBtn {
+  background-color: variables.$botones;
+  padding: 8px 20px;
+  border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: right;
+
+}

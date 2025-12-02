@@ -3,7 +3,7 @@ import { Route, Routes, Navigate } from 'react-router-dom'
 
 import PokemonForm from './PokemonForm/PokemonForm'
 import SearchContainer from './SearchContainer/SearchContainer'
-import PokemonDetail from './PokemonDetails/PokemonDetails'
+import PokemonDetails from './PokemonDetails/PokemonDetails'
 
 const Main = () => {
   return <main>
@@ -11,7 +11,7 @@ const Main = () => {
     <Routes>
       <Route path='/'element={<SearchContainer/>}/>
       <Route path='/new'element={<PokemonForm/>}/>
-      <Route path='/pokemon/:id'element={<PokemonDetail/>}/>
+      <Route path='/pokemon/:id'element={<PokemonDetails/>}/>
     </Routes>
   </main>;
 };
